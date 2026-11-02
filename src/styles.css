@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: #f8f8f8; color: #111; }
+.page { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+.hero h1 { margin: 0 0 4px; font-size: 2rem; letter-spacing: -0.5px; }
+.hero p { margin: 0 0 16px; color: #555; }
+.tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+.tab { padding: 8px 20px; border: 1px solid #ccc; background: #fff; border-radius: 999px; cursor: pointer; font-size: 1rem; }
+.tab.active { background: #22577a; color: #fff; border-color: #22577a; }
+.panel { background: #fff; border: 1px solid #e2e2e2; border-radius: 12px; padding: 20px; }
+.controls { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: end; }
+.controls label { display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; color: #444; }
+.controls select, .controls button { font-size: 0.95rem; padding: 8px 12px; border-radius: 8px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+.controls button.primary { background: #38a3a5; color: #fff; border-color: #38a3a5; }
+.controls button:disabled { opacity: 0.5; cursor: default; }
+.meta { color: #666; font-size: 0.9rem; }
+.bars { display: flex; align-items: flex-end; gap: 2px; height: 320px; margin-top: 12px; }
+.bar { flex: 1; background: #57cc99; min-width: 2px; border-radius: 2px 2px 0 0; }
+.bar.hi { background: #e76f51; }
+.bar.done { background: #22577a; }
+.stats { margin-top: 16px; color: #333; }
+.grid { display: inline-block; border: 1px solid #ccc; margin-top: 12px; user-select: none; }
+.grid-row { display: flex; }
+.cell { width: 26px; height: 26px; border: 1px solid #e8e8e8; background: #fff; cursor: pointer; }
+.cell.wall { background: #22577a; border-color: #22577a; }
+.cell.start { background: #57cc99; }
+.cell.end { background: #e76f51; }
+.cell.visited { background: #bde0fe; }
+.cell.path { background: #ffd166; }
+.legend { margin-top: 14px; color: #555; font-size: 0.9rem; }
+.swatch { display: inline-block; width: 12px; height: 12px; border: 1px solid #ccc; vertical-align: middle; margin-right: 2px; }
+.swatch.start { background: #57cc99; }
+.swatch.end { background: #e76f51; }
+.swatch.wall { background: #22577a; }
+.swatch.visited { background: #bde0fe; }
+.swatch.path { background: #ffd166; }
+.footer { margin-top: 24px; color: #777; font-size: 0.9rem; }
+@media (max-width: 700px) {
+  .cell { width: 20px; height: 20px; }
+  .bars { height: 220px; }
+}
